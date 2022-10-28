@@ -1,0 +1,83 @@
+@use '../../sass/shared/mixins';
+
+.sidebar {
+  display: flex;
+  padding-top: 91px;
+  padding-left: 94px;
+  padding-bottom: 91px;
+
+  @media (max-width: 1280px) {
+    background: url(../../images/background/back_for_tablet.png);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 350px 350px;
+  }
+  @media (min-width: 1280px) {
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 80px;
+    padding-left: 32px;
+    flex-direction: column;
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    background: none;
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
+.box {
+  display: flex;
+}
+
+.summary {
+  margin-bottom: 40px;
+  @media (max-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+.summary__title {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+}
+
+.summary__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+}
+
+.summary__list,
+.list,
+.prodList {
+  color: var(--seondary-text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  @media (max-width: 1280px) {
+    overflow: auto;
+    height: 180px;
+  }
+}
+
+.summary__list {
+  @media (max-width: 1280px) {
+    margin-left: 40px;
+  }
+  @media (min-width: 1280px) {
+    margin-left: 80px;
+  }
+}
+
+.summary__listItem:not(:last-child),
+.item:not(:last-child),
+.prodItem:not(:last-child) {
+  margin-bottom: 10px;
+}

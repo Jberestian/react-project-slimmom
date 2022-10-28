@@ -1,1 +1,1 @@
-# react-project-slimmom
+Slim-mom react project;
